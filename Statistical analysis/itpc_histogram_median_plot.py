@@ -88,12 +88,12 @@ median_value_1 = np.median(aggregated_data_1)
 median_value_3 = np.median(aggregated_data_3)
 
 # Plot histograms for each group in separate figures
-# Histogram for Group 1
+# Histogram for "No experience"
 plt.figure(figsize=(12, 6))
-plt.hist(aggregated_data_1, bins=num_bins, range=hist_range, alpha=0.7, color='blue', label='Group 1')
-plt.axvline(x=median_value_1, color='black', linestyle='--', label=f'Median (Group 1: No Experience): {median_value_1:.2f}')
-plt.title('Histogram of itpc_d values for Group 1: No Experience')
-plt.xlabel('itpc_d Value')
+plt.hist(aggregated_data_1, bins=num_bins, range=hist_range, alpha=0.7, color='blue', label='"No experience"')
+plt.axvline(x=median_value_1, color='black', linestyle='--', label=f'Median ("No experience"): {median_value_1:.2f}')
+plt.title('Histogram of ITPC drop values for "No Experience"')
+plt.xlabel('ITPC drop value')
 plt.ylabel('Channel Count')
 plt.ylim(0, common_max_count)  # Set common y-axis limit
 plt.legend()
@@ -101,11 +101,11 @@ plt.grid(True)
 
 # Histogram for Group 3
 plt.figure(figsize=(12, 6))
-plt.hist(aggregated_data_3, bins=num_bins, range=hist_range, alpha=0.7, color='red', label='Group 3')
+plt.hist(aggregated_data_3, bins=num_bins, range=hist_range, alpha=0.7, color='red', label='"Experience"')
 plt.axvline(x=median_value_3, color='black', linestyle='--', label=f'Median (Group 3: Experience): {median_value_3:.2f}')
-plt.title('Histogram of itpc_d values for Group 3: Experience')
-plt.xlabel('itpc_d Value')
-plt.ylabel('Count')
+plt.title('Histogram of ITPC drop values for "Experience"')
+plt.xlabel('ITPC drop value')
+plt.ylabel('Channel Count')
 plt.ylim(0, common_max_count)  # Set common y-axis limit
 plt.legend()
 plt.grid(True)

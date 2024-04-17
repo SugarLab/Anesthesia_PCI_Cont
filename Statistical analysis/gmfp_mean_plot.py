@@ -83,14 +83,14 @@ plt.figure(figsize=(12, 6))
 # Plot each individual GMFP in faded color and mean GMFP in thick line for Group 1
 for data in gmfp_data_1:
     plt.plot(np.log(data), color='black', alpha=0.1)
-plt.plot(np.log(mean_gmfp_1), color='black', linewidth=2, label='Group 1 Mean GMFP')
+plt.plot(np.log(mean_gmfp_1), color='black', linewidth=2, label=' "No experience" Mean GMFP')
 
 # Plot each individual GMFP in faded color and mean GMFP in thick line for Group 3
 for data in gmfp_data_3:
     plt.plot(np.log(data), color='red', alpha=0.1)
-plt.plot(np.log(mean_gmfp_3), color='red', linewidth=2, label='Group 3 Mean GMFP')
+plt.plot(np.log(mean_gmfp_3), color='red', linewidth=2, label='"Experience" Mean GMFP')
 
-plt.title('Logarithm of Mean GMFP Comparison Between Group 1 and Group 3')
+plt.title('Comparison of Logarithm of Mean GMFP Between "No experience" and "Experience"')
 plt.xlabel('Time Points')
 plt.ylabel('Log(GMFP Value)')
 plt.legend()
